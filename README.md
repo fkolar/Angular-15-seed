@@ -28,24 +28,25 @@ src/                    --> Contains source that will be changed quite often JS 
 
     common/                --> Contains common parts for your application that are not specific to specific page.
         components/        --> Component directories, the new angular router requires 1 component per dir.
-        rest/             --> on place to store factories dealing with REST API, we need to have all on 1 place
+        rest/             -->  place to store factories dealing with REST API, we need to have all on 1 place
                                 Good name could be also resources. Since we are in HTTP world where all is resources
         security/        --> placeholder for any security related files
                                  - Interceptors modifying headers
                                  - login dialogs that pop -ups when server retrieves error code, etc.
                                  - etcs.
         services/        --> placeholder for services files.
-                                - Services can be app settings
+                                - Services can be appSettings
                                 - Storage
                                 - Communicating with some 3 party provides (e.g. google services, map api, facebook)
                                 - Some Utility services
 
                                 Basically the main difference between REST (which will be also services/factories)
-                                 is this will not real with your domain model.
+                                 is this will not deal with your domain model.
 
 
 test/                    --> Contains test files
-www/                    --> Contains more or latest static files that does not change that often like src/
+www/                    --> www contains more or less static files that does not change that often like src/ therefore
+                            I am keeping them outside of sources.
     ccs/                  -->  will be created by build task form sass
     images/               --> static directory for images
     js/                  -->  will be created by build task form sass
