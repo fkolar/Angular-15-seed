@@ -7,7 +7,7 @@ module.exports = {
     ' * This is example of my License\n' +
     ' */\n',
 
-    closureStart: '(function(){\n use strict;',
+    closureStart: '(function(){\n ',
     closureEnd: '\n})();',
 
     dev: 'www',
