@@ -7,6 +7,11 @@ that can modify and extends into something more complex.
 
 This seed does not contain any CSS framework as its more individual choice. If you want to use HTML5 bootstrap or even you want to bring over twitter bootstrap it’s all up to you.
 
+They are great framework to make the deployment easier (webpack, browserify) but those I like to use in the TypeScript AngularJS project
+where you have modules. Without having some module loader you will not be able to run them when you use import or require.
+I just do not feel comfortable putting request into Angular 1.x code.
+
+
 
 ## Project structure
 
