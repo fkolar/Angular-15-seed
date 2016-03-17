@@ -9,7 +9,8 @@ This seed does not contain any CSS framework as its more individual choice. If y
 
 They are great frameworks to make the deployment easier (webpack, browserify) but those I like to use e.g. for the TypeScript AngularJS project
 where you have modules. Without having some module loader you will not be able to run them when you use import or require.
-I just do not feel comfortable putting request into Angular 1.x code.
+I just do not like putting require('xxx') into Angular 1.x code + at the time of putting together a seed I could not good alternatives to some of the gulp tasks,
+like userref, templatecache, etc.
 
 
 
