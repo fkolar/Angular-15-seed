@@ -1,35 +1,27 @@
 'use strict';
 
 var myApp = angular.module('superApp', [
-    'ngNewRouter',
+    'ui.router',
     'templatescache'
 ]);
 
-myApp.config(['$componentLoaderProvider', function ($componentLoaderProvider) {
 
-    $componentLoaderProvider.setTemplateMapping(function (name) {
+myApp.config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
 
-        // app we want to keep in the root as base place holder
-        if (name === 'app') {
-            return 'app/'+ name + '.html';
-        } else if (name.toLowerCase().indexOf('layout') > 0) {
-            return 'common/layout/' + name + '/' + name + '.html';
-        }
-        return 'common/components/' + name + '/' + name + '.html';
-    });
-}]);
+    $stateProvider
+        .state('app', {
+            url: '/',
+            templateUrl: 'app/app.html',
+            controller: 'AppController as app'
+        });
+});
 
-myApp.controller('AppController', function ($router) {
+
+myApp.controller('AppController', function () {
     var vm = this;
     vm.name = 'Angular Developer';
 
-
-    /**
-     * Routing configuration
-     */
-    $router.config([
-        { path:'/', component:'app' }
-    ]);
 });
 
 
