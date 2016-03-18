@@ -46,8 +46,11 @@ gulp.task('clean-css', function (cb) {
 
 
 // Main building task that does several things all based on build.config.js:
-// set filename, wrap JS content with self-exec func.block, license, anotates injection,
+// set filename, wrap JS content with self-exec func.block, license, annotates injection,
 // check js syntax, if prod then uglify
+// why wrap it with self-exec function? There is a good reason which you code will not conflict with anything else.
+// if you give you module a name and will have your module inside a variable you can easily share inside the file and you
+// not it will not overwrite some other vars from other files. so it is nicely isolated.
 
 gulp.task('build', ['clean-js', 'clean-css'], function () {
 
