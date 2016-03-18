@@ -5,6 +5,9 @@ There are many AngularJS seeds, but they either brings too much complexity and h
 And this is just another one which contains a skeleton for Angular 1.5 App along with new Router. It also contains sample hello world app
 that can modify and extends into something more complex.
 
+*update*: Had to rollback new UI router as its still buggy and does not support nested views. In current version 053 there still open issues that has to do with
+nested view and uptill now they are  not fixed. So I had to go back to more solid solution.
+
 This seed does not contain any CSS framework as its more individual choice. If you want to use HTML5 bootstrap or even you want to bring over twitter bootstrap it’s all up to you.
 
 They are great frameworks to make the deployment easier (webpack, browserify) but those I like to use e.g. for the TypeScript AngularJS project
